@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-
+import { useState } from "react";
 const funFacts = [
   {
     question: "What’s my favorite way to unwind after work?",
@@ -69,9 +68,8 @@ export default function App() {
           {funFacts.map((fact, idx) => (
             <div key={idx} className="perspective" style={{ perspective: 800 }}>
               <div
-                className={`relative w-64 h-32 cursor-pointer transition-transform duration-500 transform-style-preserve-3d ${
-                  flipped[idx] ? "rotate-y-180" : ""
-                }`}
+                className={`relative w-64 h-32 cursor-pointer transition-transform duration-500 transform-style-preserve-3d ${flipped[idx] ? "rotate-y-180" : ""
+                  }`}
                 onClick={() => handleFlip(idx)}
                 style={{ transformStyle: "preserve-3d" }}
               >
@@ -115,9 +113,8 @@ export default function App() {
             <button
               key={idx}
               onClick={() => setPath(idx)}
-              className={`px-5 py-3 rounded-xl shadow text-base font-semibold transition bg-amber-200 hover:bg-amber-400 hover:text-white ${
-                path === idx ? "bg-amber-500 text-white scale-105" : ""
-              }`}
+              className={`px-5 py-3 rounded-xl shadow text-base font-semibold transition bg-amber-200 hover:bg-amber-400 hover:text-white ${path === idx ? "bg-amber-500 text-white scale-105" : ""
+                }`}
             >
               {c.label}
             </button>
